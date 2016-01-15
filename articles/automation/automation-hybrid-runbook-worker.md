@@ -85,15 +85,15 @@ Open a PowerShell session in Administrator mode and run the following commands t
 
 Then run the **Add-HybridRunbookWorker** cmdlet using the following syntax:
 
-	Add-HybridRunbookWorker –Name <String> -EndPoint <Url> -Token <String>
+	Add-HybridRunbookWorker -GroupName <String> -Url <Url> -Key <String>
 
-You can get the information required for this cmdlet from the  **Manage Keys** blade in the Azure preview portal.  Open this blade by clicking the key icon on the Elements panel for the automation account.
+You can get the information required for this cmdlet from the  **Manage Keys** blade in the Azure portal.  Open this blade by clicking the key icon on the Elements panel for the automation account.
 
 ![Hybrid Runbook Worker Overview](media/automation-hybrid-runbook-worker/elements-panel-keys.png)
 
-- **Name** is the name of the Hybrid Runbook Worker Group. If this group already exists in the automation account, then the current computer is added to it.  If it does not already exist, then it is added.
-- **EndPoint** is the **URL** field in the **Manage Keys** blade.
-- **Token** is the **Primary Access Key** in the **Manage Keys** blade.  
+- **GroupName** is the name of the Hybrid Runbook Worker Group. If this group already exists in the automation account, then the current computer is added to it.  If it does not already exist, then it is added.
+- **Url** is the **URL** field in the **Manage Keys** blade.
+- **Key** is the **Primary Access Key** in the **Manage Keys** blade.  
 
 Use the **-Verbose** switch with **Add-HybridRunbookWorker** to receive detailed information about the installation.
 
